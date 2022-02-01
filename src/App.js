@@ -1,5 +1,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
+import NavBar from "./components/NavBar";
+import Header from "./components/Header";
 
 function App() {
 
@@ -31,14 +33,8 @@ function App() {
 
     return (
         <div className="App">
-            <div className="newExperienceForm">
-                <input onChange={e => setNewExperience(e.target.value)} type="text"/>
-                <button onClick={() => addExperience(newExperience)}>Add experience</button>
-            </div>
-
-            <ul>
-                {experiences.map(experience => <li>{experience.name}</li>)}
-            </ul>
+            <Header />
+           <NavBar />
         </div>
     );
 }
