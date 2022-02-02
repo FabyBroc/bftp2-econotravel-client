@@ -7,7 +7,9 @@ function NavBar(){
     return(
 
         <div className="NavBar">
-            <h1>Este es el navBar</h1>
+            <a href="/" className="home">Home</a>
+
+
         </div>
     );
 }
