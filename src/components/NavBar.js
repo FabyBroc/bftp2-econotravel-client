@@ -1,21 +1,41 @@
-import React from "react";
+import React, {useState, useEffect} from 'react'
+import './NavBar.css'
 
-// 1. Declaramos la función
-function NavBar(){
-
-    //2. Dentro del retorno introducimos el html
-    return(
-
-        <div className="NavBar">
-            <a href="/" className="home">Home</a>
+ function Navbar() {
+    const [toggleMenu, setToggleMenu] = useState(false)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
 
-        </div>
-    );
+    const toggleNav = () => {
+        setToggleMenu(!toggleMenu)
+    }
+
+    useEffect(() => {
+
+        const changeWidth = () => {
+            setScreenWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', changeWidth)
+
+        return () => {
+            window.removeEventListener('resize', changeWidth)
+        }
+
+    }, [])
+
+    return (
+        <nav>
+            {(toggleMenu || screenWidth > 500) && (
+                <ul className="list">
+                    <li className="items" href="/" >Home</li>
+                    <li className="items">New</li>
+
+                </ul>
+            )}
+
+        </nav>
+    )
 }
 
-
-
-
-
-export  default NavBar
+export default Navbar
