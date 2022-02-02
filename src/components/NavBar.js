@@ -1,40 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import './NavBar.css'
+import { Nav } from 'rsuite';
 
  function Navbar() {
-    const [toggleMenu, setToggleMenu] = useState(false)
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
-
-    const toggleNav = () => {
-        setToggleMenu(!toggleMenu)
-    }
-
-    useEffect(() => {
-
-        const changeWidth = () => {
-            setScreenWidth(window.innerWidth);
-        }
-
-        window.addEventListener('resize', changeWidth)
-
-        return () => {
-            window.removeEventListener('resize', changeWidth)
-        }
-
-    }, [])
 
     return (
-        <nav>
-            {(toggleMenu || screenWidth > 500) && (
-                <ul className="list">
-                    <li className="items" href="/" >Home</li>
-                    <li className="items">New</li>
 
-                </ul>
-            )}
-
-        </nav>
+        <Nav className="nav">
+            <Nav.Item className="home" href="/" >Home</Nav.Item>
+            <Nav.Item className="add" href="#">Añadir</Nav.Item>
+        </Nav>
     )
 }
 

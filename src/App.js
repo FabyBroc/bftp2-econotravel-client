@@ -2,6 +2,8 @@ import './App.css';
 import {useEffect, useState} from "react";
 import NavBar from "./components/NavBar";
 import Header from "./components/Header";
+import ExperienceCatalogo from "./components/ExperienceCatalogo";
+
 
 function App() {
 
