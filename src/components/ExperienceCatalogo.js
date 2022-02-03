@@ -15,7 +15,7 @@ function ExperienceCatalogo () {
                     y sorprendentes lugares.</p>
                 <span className="card-text"><b>Precio:</b> 250€</span>
                 <br />
-                <span className="card-text"><b>Duración:</b> 4h</span>
+                <span className="card-text" class="text-justify"><b>Duración:</b> 4h</span>
                 <div className="botones">
                     <a href="#" className="btn" >Edit</a>
                     <a href="#" className="btn" >Delete</a>
