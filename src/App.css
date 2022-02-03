@@ -3,7 +3,7 @@
 }
 
 img{
-  width: 100px;
+  width: 135px;
   padding: 5px;
 
 }
@@ -12,6 +12,11 @@ img{
   background-color: #2F5135;
   display: flex;
   align-items: flex-start;
+}
+
+.buscador{
+  display: flex;
+  justify-content: flex-end;
 }
 
 
