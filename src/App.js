@@ -37,6 +37,7 @@ function App() {
         <div className="App">
             <Header />
            <NavBar />
+            <ExperienceCatalogo />
         </div>
     );
 }

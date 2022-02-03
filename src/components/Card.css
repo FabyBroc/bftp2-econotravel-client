@@ -1,0 +1,42 @@
+.card {
+    width: 500px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    font-family: Roboto;
+}
+
+.image-card {
+    width: 80%;
+    height: 350px;
+    border-radius: 5%;
+}
+
+a.btn {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 30%;
+    border-radius: 0.5em;
+}
+
+.card-body {
+    padding: 5px 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 20px 0px;
+}
+
+.card-text {
+    font-size: 20px;
+    line-height: 1.6;
+}
