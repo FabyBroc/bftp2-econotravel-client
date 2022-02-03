@@ -1,5 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
 import './Card.css'
+=======
+import bootstrap from "react-bootstrap”;
+
+>>>>>>> 12a6856f7f70e28cfbcc073637993c3997d6de38
 
 function ExperienceCatalogo () {
     return (
@@ -16,6 +21,50 @@ function ExperienceCatalogo () {
             </div>
     </div>
     );
+
+
+return (
+    <div className={Card}>
+    <CCard style={{ width: '18rem' }}>
+
+        <CCardImage orientation="top" src="/images/react.jpg" />
+
+        <CCardBody>
+
+            <CCardTitle>Card title</CCardTitle>
+
+            <CCardText>
+
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+
+            </CCardText>
+
+        </CCardBody>
+
+        <CListGroup flush>
+
+            <CListGroupItem>Cras justo odio</CListGroupItem>
+
+            <CListGroupItem>Dapibus ac facilisis in</CListGroupItem>
+
+            <CListGroupItem>Vestibulum at eros</CListGroupItem>
+
+        </CListGroup>
+
+        <CCardBody>
+
+            <CCardLink href="#">Card link</CCardLink>
+
+            <CCardLink href="#">Another link</CCardLink>
+
+        </CCardBody>
+
+    </CCard>
+
+)
+
+
+
 
 
 }
