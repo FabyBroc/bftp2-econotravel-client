@@ -5,14 +5,10 @@
 img{
   width: 135px;
   padding: 5px;
-
 }
 
 .NavBar{
   background-color: #2F5135;
-  display: flex;
-  align-items: flex-start;
-
 }
 
 .buscador{
