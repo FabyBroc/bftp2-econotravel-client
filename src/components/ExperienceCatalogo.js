@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import './Card.css'
 
 
@@ -22,7 +24,12 @@ function ExperienceCatalogo () {
                 </div>
             </div>
     </div>
+
+
+
+
+
     );
-}
+
 
 export default ExperienceCatalogo
