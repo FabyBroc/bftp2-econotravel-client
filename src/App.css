@@ -1,5 +1,8 @@
 .App {
+  display: flex;
   text-align: center;
+  flex-direction: column;
+
 }
 
 img{
@@ -7,14 +10,20 @@ img{
   padding: 5px;
 }
 
-.NavBar{
-  background-color: #2F5135;
+@keyframes color  {
+    from {background-color: #4B7F55;}
+    to {background-color: #FAF1E2;}
+
 }
 
-.buscador{
-  display: flex;
-  justify-content: flex-end;
+.color {
+  height: auto;
+  width: 100%;
+  animation: color 2s alternate infinite;
+
 }
+
+
 
 
 
