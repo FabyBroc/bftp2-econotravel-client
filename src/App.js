@@ -1,7 +1,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import Header from "./components/Header";
-import ExperienceCatalogo from "./components/ExperienceCatalogo";
+import ExperienceCatalog from "./components/ExperienceCatalog";
 
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <ExperienceCatalogo />
+            <ExperienceCatalog />
         </div>
     );
 }

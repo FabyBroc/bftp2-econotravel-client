@@ -2,7 +2,7 @@ import React from 'react'
 import Card from "./Card.js";
 import NavBar from "./NavBar.js";
 
- function ExperienceCatalogo () {
+ function ExperienceCatalog () {
      return (
 
          <div className="expCatalogo">
@@ -14,6 +14,6 @@ import NavBar from "./NavBar.js";
 
  }
 
-export default ExperienceCatalogo
+export default ExperienceCatalog
 
 
