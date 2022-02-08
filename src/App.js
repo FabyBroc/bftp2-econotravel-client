@@ -1,7 +1,12 @@
 import './App.css';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Header from "./components/Header";
 import ExperienceCatalogo from "./components/ExperienceCatalogo";
+import ReactDOM from "react-dom";
+import NavBar from "./components/NavBar";
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
 
 
 function App() {
@@ -15,7 +20,7 @@ function App() {
         if (requiresUpdate) {
             fetch("http://localhost:8080/api/experiences")
                 .then(r => r.json())
-                .then(setExperiences)
+                .then(setExperiences(experiences))
                 .then(_ => setRequiresUpdate(false));
         }
     }, [requiresUpdate])
@@ -31,11 +36,14 @@ function App() {
 
     }
 
-
     return (
         <div className="App">
             <Header />
-            <ExperienceCatalogo />
+            <NavBar />
+            <ExperienceCatalogo experiences={experiences} addExperience={addExperience} />
+
+
+
         </div>
     );
 }

@@ -7,6 +7,7 @@ function Header(){
         <div className="color">
         <div className="logo">
             <img src={logo} alt="Logo"/>
+
         </div>
         </div>
     )

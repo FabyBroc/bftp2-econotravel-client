@@ -1,13 +1,14 @@
 import React from 'react'
 import Card from "./Card.js";
-import NavBar from "./NavBar.js";
 
- function ExperienceCatalogo () {
+
+
+ function ExperienceCatalogo (experiences, addExperience) {
+
      return (
 
-         <div className="expCatalogo">
-         <NavBar />
-         <Card />
+         <div className="expCatalogo" >
+             {experiences.map(experience => <p>{experience.name}</p>)}
         </div>
 
      )
