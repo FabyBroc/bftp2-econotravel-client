@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Card from "./Card";
+import './ExperienceCatalog.css'
 
 
 
@@ -9,7 +10,7 @@ import Card from "./Card";
 
 
          return (
-             <div >
+             <div className="container">
                  {experiences.map(experience => <Card experience={experience} key={experience.id} /> )}
              </div>
 
