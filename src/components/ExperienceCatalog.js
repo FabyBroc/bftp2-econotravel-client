@@ -9,7 +9,7 @@ import Card from "./Card";
 
 
          return (
-             <div>
+             <div >
                  {experiences.map(experience => <Card experience={experience} key={experience.id} /> )}
              </div>
 
