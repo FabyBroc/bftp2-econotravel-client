@@ -52,7 +52,7 @@ function App() {
         <div className="App">
                     <Header />
                     <NavBar />
-                    <ExperienceCatalog experiences={experiences} />
+
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
