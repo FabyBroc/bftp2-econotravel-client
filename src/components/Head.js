@@ -1,6 +1,6 @@
 import React from "react";
 
-import ExperienceCatalogo from "react-bootstrap/ExperienceCatalogo";
+import ExperienceCatalogo from "react-bootstrap/ExperienceCatalog";
 
 
 function Head() {

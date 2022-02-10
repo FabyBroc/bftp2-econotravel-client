@@ -1,24 +1,29 @@
 .App {
+  display: flex;
   text-align: center;
+  flex-direction: column;
+
 }
 
 img{
   width: 135px;
   padding: 5px;
+}
+
+@keyframes color  {
+    from {background-color: #4B7F55;}
+    to {background-color: #FAF1E2;}
 
 }
 
-.NavBar{
-  background-color: #2F5135;
-  display: flex;
-  align-items: flex-start;
+.color {
+  height: auto;
+  width: 100%;
+  animation: color 2s alternate infinite;
 
 }
 
-.buscador{
-  display: flex;
-  justify-content: flex-end;
-}
+
 
 
 
