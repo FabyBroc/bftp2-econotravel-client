@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import ExperienceCatalog from "./components/ExperienceCatalog";
 import ReactDOM from "react-dom";
 import NavBar from "./components/NavBar";
+import {BrowserRouter, Navigate, Route, Routes, Switch} from "react-router-dom";
 ReactDOM.render(<App />, document.getElementById('root'));
 
 
@@ -48,13 +49,23 @@ function App() {
     }
 
     return (
-
         <div className="App">
                     <Header />
                     <NavBar />
-                <ExperienceCatalog  experiences={experiences} />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
+                    <Route path="/infoExperience" element={InfoExperience} />
+                    <Route path="/add" element={FormAdd} />
+                    <Route path="*" element={<Navigate replace to="/" />}  />
+
+
+                </Routes>
+            </BrowserRouter>
 
         </div>
+
+
     );
 }
 
