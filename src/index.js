@@ -8,9 +8,7 @@ import { render } from 'react-dom';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
   document.getElementById('root')
 
 );
@@ -21,4 +19,6 @@ render(
     </BrowserRouter>,
     document.querySelector('#root')
 )
+
+
 
