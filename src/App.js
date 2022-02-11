@@ -2,12 +2,8 @@ import './App.css';
 import {useEffect, useState} from "react";
 import Header from "./components/Header";
 import ExperienceCatalog from "./components/ExperienceCatalog";
-import ReactDOM from "react-dom";
 import NavBar from "./components/NavBar";
-import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
+import {Navigate, Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -53,15 +49,13 @@ function App() {
                     <Header />
                     <NavBar />
 
-
-            <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
                     {/*<Route path="/infoExperience" element={InfoExperience} />
                     <Route path="/add" element={FormAdd} />*/}
                     <Route path="*" element={<Navigate replace to="/" />}  />
                 </Routes>
-            </BrowserRouter>
+
 
         </div>
 
