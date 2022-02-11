@@ -53,10 +53,11 @@ function App() {
                     <Header />
                     <NavBar />
 
+
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
-                  {/*  <Route path="/infoExperience" element={InfoExperience} />
+                    {/*<Route path="/infoExperience" element={InfoExperience} />
                     <Route path="/add" element={FormAdd} />*/}
                     <Route path="*" element={<Navigate replace to="/" />}  />
                 </Routes>

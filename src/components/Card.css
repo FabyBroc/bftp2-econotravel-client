@@ -59,7 +59,8 @@
 
 .card-text {
     font-size: 70%;
-    margin: 5px;
+    margin: 10px;
+    text-align: justify;
 
 }
 
