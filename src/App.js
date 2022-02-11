@@ -51,8 +51,8 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
-                    <Route path="/infoExperience" element={<InfoExperience />} />
-                    <Route path="/add" element={<FormAdd experience={addExperience(newExperience, setNewExperience)} />} />
+                    {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
+                    {/*<Route path="/add" element={<FormAdd experience={addExperience(newExperience, setNewExperience)} />} />*/}
                     <Route path="*" element={<Navigate replace to="/" />}  />
                 </Routes>
 
