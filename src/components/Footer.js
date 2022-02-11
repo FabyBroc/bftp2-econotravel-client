@@ -8,9 +8,8 @@ function Footer(){
         <footer className="footer">
             <ul>
                 <li>FemTech2022</li>
-                <li><Link>Instagram</Link></li>
-                <li><Link>Facebook</Link></li>
-                <li><Link>Email</Link></li>
+                <li>Instagram</li>
+                <li>Facebook</li>
             </ul>
         </footer>
     );
