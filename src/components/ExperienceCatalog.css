@@ -1,14 +1,8 @@
 .container {
-
     display: flex;
     margin: 0px;
     padding: 0px;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 
-.footer{
-    background-color: #2F5135;
-
-}
