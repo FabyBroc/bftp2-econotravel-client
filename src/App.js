@@ -5,6 +5,8 @@ import ExperienceCatalog from "./components/ExperienceCatalog";
 import NavBar from "./components/NavBar";
 import {Navigate, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer";
+import FormAdd from "./components/FormAdd";
+
 
 
 
@@ -51,8 +53,8 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
-                    {/*<Route path="/infoExperience" element={InfoExperience} />
-                    <Route path="/add" element={FormAdd} />*/}
+                    {/*<Route path="/infoExperience" element={InfoExperience} />*/}
+                    <Route path="/add" element={FormAdd} />
                     <Route path="*" element={<Navigate replace to="/" />}  />
                 </Routes>
 

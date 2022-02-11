@@ -1,7 +1,10 @@
 import React, { Fragment, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const Formulario = () => {
+
+
+
+const FormAdd = () => {
 
     const {register, errors, handleSubmit} = useForm();
 
@@ -22,23 +25,23 @@ const Formulario = () => {
             <h1>FORMULARIO</h1>
             <form onSubmit={handleSubmit(procesarFormulario)}>
                 <input
-                    name="titulo"
+                    name="name"
                     ref={
                         register({
-                            required: {value:true, message: 'Ingrese un nombre'}
+                            required: {value:true, message: 'Ingrese título'}
                         })
                     }
                     className="form-control my-2"
                     placeholder="Ingrese título"
                 ></input>
                 <span className="text-danger text-small d-block mb-2">
-                    {errors?.titulo?.message}
+                    {errors?.name?.message}
                 </span>
 
 
 
                 <input
-                    name="imagen"
+                    name="imgUrl"
                     ref={
                         register({
                             required: {value:true, message: 'Ingrese Url Imagen'}
@@ -48,7 +51,7 @@ const Formulario = () => {
                     placeholder="Ingrese Url Imagen"
                 ></input>
                 <span className="text-danger text-small d-block mb-2">
-                    {errors?.descripcion?.message}
+                    {errors?.imgUrl?.message}
                 </span>
 
 
@@ -65,8 +68,30 @@ const Formulario = () => {
                     placeholder="Ingrese duración"
                 ></input>
                 <span className="text-danger text-small d-block mb-2">
-                    {errors?.descripcion?.message}
+                    {errors?.time?.message}
                 </span>
+
+
+
+
+
+
+                <input
+                    name="price"
+                    ref={
+                        register({
+                            required: {value:true, message: 'Ingrese precio'}
+                        })
+                    }
+                    className="form-control my-2"
+                    placeholder="Ingrese precio"
+                ></input>
+                <span className="text-danger text-small d-block mb-2">
+                    {errors?.price?.message}
+                </span>
+
+
+
 
 
 
@@ -84,6 +109,10 @@ const Formulario = () => {
                 <span className="text-danger text-small d-block mb-2">
                     {errors?.descripcion?.message}
                 </span>
+
+
+
+
                 <button
                     type="submit"
                     className="btn btn-primary"
@@ -104,4 +133,4 @@ const Formulario = () => {
     );
 }
 
-export default Formulario;
+export default FormAdd;
