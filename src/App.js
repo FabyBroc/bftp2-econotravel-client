@@ -5,6 +5,7 @@ import ExperienceCatalog from "./components/ExperienceCatalog";
 import ReactDOM from "react-dom";
 import NavBar from "./components/NavBar";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import Footer from "./components/Footer";
 ReactDOM.render(<App />, document.getElementById('root'));
 
 
@@ -33,7 +34,6 @@ function App() {
                 method: 'GET'
             }
         ).then(_ => setRequiresUpdate(true))
-
     }
 
     const addExperience = (experience) => {
@@ -44,16 +44,12 @@ function App() {
                 body: JSON.stringify(experience)
             }
         ).then(_ => setRequiresUpdate(true))
-
-
     }
 
     return (
         <div className="App">
                     <Header />
                     <NavBar />
-
-
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
@@ -62,10 +58,8 @@ function App() {
                     <Route path="*" element={<Navigate replace to="/" />}  />
                 </Routes>
             </BrowserRouter>
-
+            <Footer />
         </div>
-
-
     );
 }
 
