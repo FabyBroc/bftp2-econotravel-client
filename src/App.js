@@ -5,6 +5,8 @@ import ExperienceCatalog from "./components/ExperienceCatalog";
 import NavBar from "./components/NavBar";
 import {Navigate, Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer";
+import FormAdd from "./components/FormAdd";
+
 
 
 
@@ -51,8 +53,18 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
+<<<<<<< HEAD
                     {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
                     {/*<Route path="/add" element={<FormAdd experience={addExperience(newExperience, setNewExperience)} />} />*/}
+=======
+<<<<<<< HEAD
+                    {/*<Route path="/infoExperience" element={InfoExperience} />*/}
+                    <Route path="/add" element={FormAdd} />
+=======
+                    <Route path="/infoExperience" element={<InfoExperience />} />
+                    <Route path="/add" element={<FormAdd experience={addExperience(newExperience, setNewExperience)} />} />
+>>>>>>> c83ec15fe5b5716c83198233b48204933e3bced7
+>>>>>>> 8de63fe249db89ad6395b02cad00556035b45e19
                     <Route path="*" element={<Navigate replace to="/" />}  />
                 </Routes>
 
