@@ -9,9 +9,13 @@ function NavBar () {
     return (
         <div className="nav">
             <ul>
-                <li><a href=" ">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
             </ul>
+            <div className="end-nav">
+                <button className="btn-add" to="/add">Add new +</button>
+                <input className="seach" placeholder="Search" />
+            </div>
         </div>
         )
 }
