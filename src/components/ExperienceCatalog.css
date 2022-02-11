@@ -1,14 +1,18 @@
 .container {
-
     display: flex;
     margin: 0px;
     padding: 0px;
     justify-content: space-around;
     flex-wrap: wrap;
-
 }
 
-.footer{
+.footer ul{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: #2F5135;
+    list-style: none;
 
 }
