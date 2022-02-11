@@ -11,32 +11,43 @@
     list-style-type: none;
     border: solid 1px red;
     text-transform: uppercase;
-
-}
-
-.nav ul {
     list-style-type: none;
     text-align: center;
+
 }
+
 
 .nav li {
     display: inline;
     float: left;
     text-align: center;
-
 }
 
-li a {
+li a{
     text-decoration: none;
     padding: 5px 10px;
-    display: block;
+    display: flex;
     text-align: center;
     color: #FAF1E2;
-
-
 }
 li a:hover {
     background-color: #2F5135;
+}
+
+div .end-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: 525px;
+}
+
+.btn-add{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #4B7F55;
+    border-radius: 8px;
 }
 
 
