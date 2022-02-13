@@ -6,7 +6,7 @@ function Footer(){
     return (
         <footer className="footer">
             <ul>
-                <li>FemTech2022</li>
+                <li>@FemTech2022</li>
                 <li>Instagram</li>
                 <li>Facebook</li>
             </ul>

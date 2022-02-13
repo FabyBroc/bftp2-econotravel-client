@@ -48,23 +48,17 @@ function App() {
 
     return (
         <div className="App">
+
                     <Header />
+
                     <NavBar />
 
                 <Routes>
                     <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
-<<<<<<< HEAD
+
                     {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
-                    {/*<Route path="/add" element={<FormAdd experience={addExperience(newExperience, setNewExperience)} />} />*/}
-=======
-<<<<<<< HEAD
-                    {/*<Route path="/infoExperience" element={InfoExperience} />*/}
-                    <Route path="/add" element={FormAdd} />
-=======
-                    <Route path="/infoExperience" element={<InfoExperience />} />
                     <Route path="/add" element={<FormAdd experience={addExperience(newExperience, setNewExperience)} />} />
->>>>>>> c83ec15fe5b5716c83198233b48204933e3bced7
->>>>>>> 8de63fe249db89ad6395b02cad00556035b45e19
+
                     <Route path="*" element={<Navigate replace to="/" />}  />
                 </Routes>
 

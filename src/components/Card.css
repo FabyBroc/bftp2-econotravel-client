@@ -3,18 +3,23 @@
     flex-direction: column;
     width: 250px;
     min-height: 350px;
-    background: #FAF1E2;
+    background-color: #FAF1E2;
     text-align: center;
     margin: 10px auto;
     border-radius: 0.5em;
     border: 1px solid #4B7F55;
     box-shadow: 2px 2px 4px #4B7F55;
     padding-bottom: 5px;
+    background-image: linear-gradient(#2F5135, #FAF1E2);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+
+    transition: background-size 500ms;
 }
 .card:hover {
-    box-shadow: 5px 5px 0px #2F5135;
-    top: 3px;
-    left: -3px;
+    background-size: 100% 100%;
+    background-position: left;
 }
 
 
@@ -44,12 +49,18 @@
     width: 30%;
     border-radius: 0.5em;
 
+    background-image: linear-gradient(#2F5135, #FAF1E2);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+
+    transition: background-size 500ms;
+
 }
 
 .btn:hover {
-    box-shadow: 5px 5px 0px #2F5135;
-    top: 3px;
-    left: -3px;
+    background-size: 100% 100%;
+    background-position: left;
 }
 
 .card-title {

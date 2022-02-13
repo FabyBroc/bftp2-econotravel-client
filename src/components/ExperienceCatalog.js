@@ -4,14 +4,13 @@ import './ExperienceCatalog.css'
 
 
 
-
-
  function ExperienceCatalog ({experiences}) {
 
 
          return (
+
              <div className="container">
-                 {experiences.map(experience => <Card experience={experience} key={experience.id} /> )}
+                 {experiences.map(experience => <Card experience={experience} key={experience.id}/> )}
              </div>
 
          )

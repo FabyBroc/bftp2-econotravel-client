@@ -14,7 +14,7 @@ function NavBar () {
             </ul>
             <div className="end-nav">
                 <button className="btn-add" to="/add">Add new +</button>
-                <input className="seach" placeholder="Search" />
+                <input className="search" placeholder="Search" />
             </div>
         </div>
         )

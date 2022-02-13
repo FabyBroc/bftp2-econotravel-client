@@ -10,18 +10,21 @@ img{
   padding: 5px;
 }
 
+.color {
+    height: auto;
+    width: 100%;
+    animation: color 3s alternate infinite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
 @keyframes color  {
     from {background-color: #4B7F55;}
     to {background-color: #FAF1E2;}
 
 }
 
-.color {
-  height: auto;
-  width: 100%;
-  animation: color 2s alternate infinite;
-
-}
 
 .footer ul{
     height: 80px;

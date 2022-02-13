@@ -9,46 +9,104 @@
     display: flex;
     align-items: center;
     list-style-type: none;
-    border: solid 1px red;
     text-transform: uppercase;
     list-style-type: none;
-    text-align: center;
 
 }
-
 
 .nav li {
     display: inline;
     float: left;
     text-align: center;
+
+
 }
 
 li a{
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px 20px;
     display: flex;
     text-align: center;
     color: #FAF1E2;
-}
-li a:hover {
-    background-color: #2F5135;
+    border-radius: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: linear-gradient(#2F5135, #FAF1E2);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+
+    transition: background-size 500ms;
+
 }
 
-div .end-nav{
+li a:hover {
+    background-size: 100% 100%;
+    background-position: left;
+}
+
+.end-nav{
     display: flex;
+    text-align: center;
     flex-direction: row;
-    align-items: flex-end;
-    margin-left: 525px;
+    justify-content: space-around;
+    align-items: revert;
+    margin-left: 50%;
+    padding: 0;
+    width: auto;
+
 }
 
 .btn-add{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
-    color: #4B7F55;
-    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #4B7F55;
+    color: #FAF1E2;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+
+    background-image: linear-gradient(#2F5135, #FAF1E2);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+
+    transition: background-size 500ms;
 }
+
+.btn-add:hover {
+    background-size: 100% 100%;
+    background-position: left;
+}
+
+.search{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    outline: #4B7F55;
+    border-radius: 0.5em;
+    color: #2F5135;
+
+    background-image: linear-gradient(#2F5135, #FAF1E2);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+
+    transition: background-size 500ms;
+
+
+}
+
+.search:hover {
+    background-size: 100% 100%;
+    background-position: left;
+    color: #2F5135;
+}
+
+
+
+
 
 
 

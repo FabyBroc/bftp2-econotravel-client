@@ -1,18 +1,17 @@
 import React, { Fragment, useState } from 'react';
-import { useForm } from 'react-hook-form';
-
 
 
 
 const FormAdd = () => {
 
-    const {register, errors, handleSubmit} = useForm();
 
-    const [entradas, setentradas] = useState([]);
+    const {register, errors, handleSubmit} = useState("");
+
+    const [entradas, setEntradas] = useState([]);
 
     const procesarFormulario = (data, e) => {
         console.log(data);
-        setentradas([
+        setEntradas([
             ...entradas,
             data
         ])
@@ -120,15 +119,15 @@ const FormAdd = () => {
                     Agregar
                 </button>
             </form>
-            <ul className="mt-2">
+            {<ul className="mt-2">
                 {
-                    entradas.map((item, index) =>
+                    entradas.map((experience, index) =>
                         <li key={index}>
-                            {item.titulo} - {item.descripcion}
+                            {entradas.name} - {entradas.descripcion}
                         </li>
                     )
                 }
-            </ul>
+            </ul>}
         </Fragment>
     );
 }
