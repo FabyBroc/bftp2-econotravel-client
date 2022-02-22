@@ -15,7 +15,7 @@ const FormAdd = () => {
             ...entradas,
             data
         ])
-        // limpiar campos
+        // limpiar campos  --- prueba
         e.target.reset();
     }
 
