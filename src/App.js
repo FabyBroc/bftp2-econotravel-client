@@ -8,15 +8,11 @@ import Footer from "./components/Footer";
 import FormAdd from "./components/FormAdd";
 
 
-
-
-
 function App() {
 
     const [experiences, setExperiences] = useState([]);
     const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
-
 
 
     useEffect(() => {
@@ -28,39 +24,54 @@ function App() {
         }
     }, [requiresUpdate])
 
-    const deleteExperience = (id) => {
-        fetch(`http://localhost:8080/api/experiences/delete/${id}`,
-            {
-                method: 'GET'
-            }
-        ).then(_ => setRequiresUpdate(true))
-    }
-
-    const addExperience = (experience) => {
-        fetch("http://localhost:8080/api/experiences",
+    const addExperience = (experienceName) => {
+        fetch("http://localhost:8080/api/experiences/",
             {
                 method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({name: experienceName})
+            }
+        ).then(_ => setRequiresUpdate(true))
+
+    }
+
+    const editExperience = (experience) => {
+        fetch("http://localhost:8080/api/experiences/edit/{id}",
+            {
+                method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(experience)
             }
         ).then(_ => setRequiresUpdate(true))
+
     }
+
+    const deleteExperience = (id) => {
+        fetch(`http://localhost:8080/api/experiences/delete/{id}`,
+            {
+                method: 'DELETE'
+            }
+        ).then(_ => setRequiresUpdate(true))
+
+    }
+
 
     return (
         <div className="App">
 
-                    <Header />
+            <Header />
 
-                    <NavBar />
+            <NavBar />
 
-                <Routes>
-                    <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
+            <Routes>
+                <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
+                <Route path="/add" element={<FormAdd  />} />
 
-                    {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
-                    <Route path="/add" element={<FormAdd />} />
+                {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
 
-                    <Route path="*" element={<Navigate replace to="/" />}  />
-                </Routes>
+                <></>
+                <Route path="*" element={<Navigate replace to="/" />}  />
+            </Routes>
 
             <Footer />
 

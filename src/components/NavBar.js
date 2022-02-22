@@ -2,9 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import {Link} from "react-router-dom";
 
-
-
-function NavBar () {
+function NavBar() {
 
     return (
         <div className="nav">
@@ -13,11 +11,11 @@ function NavBar () {
                 <li><Link to="/about">About</Link></li>
             </ul>
             <div className="end-nav">
-                <button className="btn-add" to="/add">Add new +</button>
+                <button className="btn-add" to="/add">Add new</button>
                 <input className="search" placeholder="Search" />
             </div>
         </div>
-        )
+    )
 }
 
 export default NavBar

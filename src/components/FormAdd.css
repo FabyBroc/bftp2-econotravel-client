@@ -1,0 +1,118 @@
+.form-wrapper {
+    margin-bottom: 100px;
+}
+
+.form-section {
+    width: 94%;
+    text-transform: uppercase;
+    font-family: 'Roboto', fantasy;
+    color: #FAF1E2;
+    background-color: #4B7F55;
+    margin: 10px;
+    padding: 20px 20px 2px 20px;
+    border-radius: 5px;
+
+    background-image: linear-gradient(#2F5135, #FAF1E2);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+
+    transition: background-size 500ms;
+
+}
+
+.form-section:hover {
+    background-size: 100% 100%;
+    background-position: left;
+    color: #072b1b;
+}
+
+.form-section h1 {
+    font-family: 'Roboto', fantasy;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group input {
+    width: 80%;
+    font-family: 'Roboto', fantasy;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #2F5135;
+    padding: 5px;
+    margin-left: 25px;
+    background-color: #FAF1E2;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    outline: #4B7F55;
+}
+
+.form-group input:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2F5135;
+
+}
+
+textarea, select {
+    background-color: #FAF1E2;
+    padding: 3px;
+    font-family: 'Roboto', fantasy;
+    border-radius: 5px;
+    width: 80%;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    border: 1px solid #ccc7c7;
+    outline: #4B7F55;
+}
+
+textarea:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4b7f55;
+
+}
+
+.add-form {
+    outline: #4B7F55;
+    margin-bottom: 20px;
+}
+
+.btn-edit{
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #4B7F55;
+    color: #FAF1E2;
+    padding: 5px 10px;
+    margin: 0 10px 0 10px;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+
+    background-image: linear-gradient(#2F5135, #FAF1E2);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position: right;
+
+    transition: background-size 500ms;
+}
+
+.btn-edit:hover {
+    background-size: 100% 100%;
+    background-position: left;
+}
+
