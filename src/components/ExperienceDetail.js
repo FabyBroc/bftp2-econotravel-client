@@ -1,5 +1,8 @@
 import React from 'react'
 import './Card.css'
+import './Card.js'
+import './ExperienceDetail.css'
+
 
 function ExperienceDetail({experience}) {
 
@@ -7,11 +10,12 @@ function ExperienceDetail({experience}) {
     return (
 
         <div className="experienceDetail">
+            <h1>PROBANDO SI SE PINTA EXPERIENCE DETAIL</h1>
             <img className="image-card" src={experience.imgUrl}/>
             <h1 className="card-title">{experience.name}</h1>
             <p className="card-text"><b>Descripción: </b>{experience.descripcion}</p>
             <div className="botones">
-                <button  className="btn">More info</button>
+
             </div>
             <span className="card-text"><b>Claves:</b> {experience.category}</span>
             <span className="card-title"><b>Duración:</b> {experience.time} h.</span>

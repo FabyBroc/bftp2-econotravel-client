@@ -6,6 +6,7 @@ const FormAdd = () => {
 
 
     const {register, errors, handleSubmit} = useState("");
+    const [requiresUpdate, setRequiresUpdate] = useState(true);
 
     const [entradas, setEntradas] = useState([]);
 
@@ -17,6 +18,17 @@ const FormAdd = () => {
         ])
         // limpiar campos
         e.target.reset();
+    }
+
+
+    const addExperience = (experience) => {
+        fetch("http://localhost:8080/api/experiences",
+            {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(experience)
+            }
+        ).then(_ => setRequiresUpdate(true))
     }
 
     return (

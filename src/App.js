@@ -3,12 +3,15 @@ import {useEffect, useState} from "react";
 import Header from "./components/Header";
 import ExperienceCatalog from "./components/ExperienceCatalog";
 import NavBar from "./components/NavBar";
-import {Navigate, Route, Routes} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer";
 import FormAdd from "./components/FormAdd";
+import ExperienceDetail from "./components/ExperienceDetail";
 
 
 
+
+    
 
 
 function App() {
@@ -36,15 +39,7 @@ function App() {
         ).then(_ => setRequiresUpdate(true))
     }
 
-    const addExperience = (experience) => {
-        fetch("http://localhost:8080/api/experiences",
-            {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(experience)
-            }
-        ).then(_ => setRequiresUpdate(true))
-    }
+
 
     return (
         <div className="App">
@@ -53,16 +48,35 @@ function App() {
 
                     <NavBar />
 
+
+
+
+
+
                 <Routes>
-                    <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
+
+
+
+                    <Route exact path="/" element={<ExperienceCatalog  experiences={experiences} />} />
 
                     {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
                     <Route path="/add" element={<FormAdd />} />
 
-                    <Route path="*" element={<Navigate replace to="/" />}  />
+                    {/* <Route path="*" element={<Navigate replace to="/" />}  /> */}
+
+                    <Route path="/moreInfo" element={<ExperienceDetail />} />
+
+
                 </Routes>
 
+
             <Footer />
+
+
+
+              
+
+
 
 
 

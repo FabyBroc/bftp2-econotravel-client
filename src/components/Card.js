@@ -1,5 +1,7 @@
 import React from 'react'
 import './Card.css'
+import  "./ExperienceDetail";
+import {NavLink as Link} from "react-router-dom"
 
 function Card({experience}) {
 
@@ -11,7 +13,10 @@ function Card({experience}) {
                 <h1 className="card-title">{experience.name}</h1>
                 <p className="card-text"><b>Descripción: </b>{experience.descripcionCorta}</p>
                 <div className="botones">
-                <button  className="btn">More info</button>
+                    <button><Link  to="/moreInfo">More Info</Link></button>
+
+
+
                 </div>
                 <span className="card-text"><b>Claves:</b> {experience.category}</span>
                 <span className="card-title"><b>Duración:</b> {experience.time} h.</span>
