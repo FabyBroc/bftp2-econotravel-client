@@ -10,10 +10,10 @@ const FormAdd = (props) => {
     const location = useLocation();
     const  data  = location.state ? location.state.data : null;
 
-<<<<<<< HEAD
+
     const {register, errors, handleSubmit} = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
-=======
+
     const [datos, setDatos] = useState(data || {
         name: '',
         descripcionCorta: '',
@@ -23,7 +23,7 @@ const FormAdd = (props) => {
         category: '',
         tags: ''
     })
->>>>>>> 863b6c71a62f154cc059cd7d5e74ebd220539dd1
+
 
     const handleInputChange = (event) => {
         setDatos({
@@ -37,8 +37,6 @@ const FormAdd = (props) => {
         console.log(datos.name + ' '  + datos.descripcionCorta + ' ' + datos.descripcion + ' ' + datos.price + ' ' + datos.time + ' ' + datos.category + ' ' + datos.imgUrl + ' ')
     }
 
-
-<<<<<<< HEAD
     const addExperience = (experience) => {
         fetch("http://localhost:8080/api/experiences",
             {
@@ -49,8 +47,6 @@ const FormAdd = (props) => {
         ).then(_ => setRequiresUpdate(true))
     }
 
-=======
->>>>>>> 863b6c71a62f154cc059cd7d5e74ebd220539dd1
     return (
 
         <section className="form-section">

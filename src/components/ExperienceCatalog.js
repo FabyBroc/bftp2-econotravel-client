@@ -4,6 +4,7 @@ import './ExperienceCatalog.css'
 
 
 
+
  function ExperienceCatalog ({experiences}) {
 
 
@@ -11,6 +12,8 @@ import './ExperienceCatalog.css'
 
              <div className="container">
                  {experiences.map(experience => <Card experience={experience} key={experience.id}/> )}
+
+
              </div>
 
          )

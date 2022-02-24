@@ -1,6 +1,7 @@
 import React from 'react'
 import './NavBar.css'
 import {Link} from "react-router-dom";
+import './About.js'
 
 function NavBar() {
 
@@ -11,7 +12,7 @@ function NavBar() {
                 <li><Link to="/about">About</Link></li>
             </ul>
             <div className="end-nav">
-                <button className="btn-add" to="/add">Add new</button>
+                <Link className="btn-add" to="/add">Add new</Link>
                 <input className="search" placeholder="Search" />
             </div>
         </div>

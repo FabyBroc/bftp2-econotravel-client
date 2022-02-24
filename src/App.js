@@ -6,17 +6,13 @@ import NavBar from "./components/NavBar";
 import { Route, Routes} from "react-router-dom";
 import Footer from "./components/Footer";
 import FormAdd from "./components/FormAdd";
+import About from "./components/About";
 import ExperienceDetail from "./components/ExperienceDetail";
 
 
-<<<<<<< HEAD
 
 
-    
 
-
-=======
->>>>>>> 863b6c71a62f154cc059cd7d5e74ebd220539dd1
 function App() {
 
     const [experiences, setExperiences] = useState([]);
@@ -44,9 +40,7 @@ function App() {
 
     }
 
-<<<<<<< HEAD
 
-=======
     const editExperience = (experience) => {
         fetch("http://localhost:8080/api/experiences/edit/{id}",
             {
@@ -57,7 +51,6 @@ function App() {
         ).then(_ => setRequiresUpdate(true))
 
     }
->>>>>>> 863b6c71a62f154cc059cd7d5e74ebd220539dd1
 
     const deleteExperience = (id) => {
         fetch(`http://localhost:8080/api/experiences/delete/{id}`,
@@ -76,37 +69,24 @@ function App() {
 
             <NavBar />
 
-<<<<<<< HEAD
 
 
 
 
-
-                <Routes>
-
-
-
-                    <Route exact path="/" element={<ExperienceCatalog  experiences={experiences} />} />
-=======
             <Routes>
                 <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/add" element={<FormAdd  />} />
->>>>>>> 863b6c71a62f154cc059cd7d5e74ebd220539dd1
+
 
                 {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
 
-<<<<<<< HEAD
                     {/* <Route path="*" element={<Navigate replace to="/" />}  /> */}
 
                     <Route path="/moreInfo" element={<ExperienceDetail />} />
 
 
                 </Routes>
-=======
-                <></>
-                <Route path="*" element={<Navigate replace to="/" />}  />
-            </Routes>
->>>>>>> 863b6c71a62f154cc059cd7d5e74ebd220539dd1
 
 
             <Footer />
