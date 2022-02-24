@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import Card from "./Card";
 import './ExperienceCatalog.css'
+import {NavLink as Link, Route} from "react-router-dom";
+import ExperienceDetail from "./ExperienceDetail";
 
 
 
@@ -11,7 +13,12 @@ import './ExperienceCatalog.css'
          return (
 
              <div className="container">
-                 {experiences.map(experience => <Card experience={experience} key={experience.id}/> )}
+                 {experiences.map(experience => <Card experience={experience} key={experience.id}
+                                                      element={<ExperienceDetail/>}
+                     />
+
+
+                 )}
 
 
              </div>

@@ -26,20 +26,37 @@ img{
 }
 
 
+
+.footer {
+    bottom: 0;
+    background-color: #2F5135;
+    margin-top:20px;
+
+
+
+
+
+
+}
+
+
+
 .footer ul{
     height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #2F5135;
     list-style: none;
+
 
 }
 
 .footer li{
     color: #FAF1E2;
 }
+
+
 
 
 
