@@ -29,12 +29,12 @@ function App() {
         }
     }, [requiresUpdate])
 
-    const addExperience = (experienceName) => {
+    const addExperience = (experience) => {
         fetch("http://localhost:8080/api/experiences/",
             {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({name: experienceName})
+                body: JSON.stringify({name: experience})
             }
         ).then(_ => setRequiresUpdate(true))
 
@@ -76,7 +76,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/add" element={<FormAdd  />} />
+                <Route path="/add" element={<FormAdd onSubmit={e => addExperience(e)}  />} />
 
 
                 {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}
