@@ -8,7 +8,9 @@ const FormAdd = (props, {addExperience}) => {
     let navigate = useNavigate();
 
 
+
     const [register, errors, handleSubmit] = useState("");
+
     const [requiresUpdate, setRequiresUpdate] = useState(true);
     const [newExperience, setNewExperience] = useState("");
     const [experienceData, setExperienceData] = useState({
