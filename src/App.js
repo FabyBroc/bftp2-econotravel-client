@@ -41,16 +41,6 @@ function App() {
     }
 
 
-    const editExperience = (experience) => {
-        fetch("http://localhost:8080/api/experiences/edit/{id}",
-            {
-                method: 'PUT',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(experience)
-            }
-        ).then(_ => setRequiresUpdate(true))
-
-    }
 
     const deleteExperience = (id) => {
         fetch(`http://localhost:8080/api/experiences/delete/${id}`,

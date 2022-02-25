@@ -1,19 +1,16 @@
 import React, {useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useLocation} from "react-router-dom";
 import './FormAdd.css'
 
 
-const FormAdd = (props, {addExperience}) => {
+const FormAdd = (props) => {
 
     let navigate = useNavigate();
+    const location = useLocation();
+    const data = location.state ? location.state.data : null;
 
 
-
-    const [register, errors, handleSubmit] = useState("");
-
-    const [requiresUpdate, setRequiresUpdate] = useState(true);
-    const [newExperience, setNewExperience] = useState("");
-    const [experienceData, setExperienceData] = useState({
+    const [experienceData, setExperienceData] = useState( data ||{
         name:'',
         descripcion:'',
         category:'',
@@ -33,7 +30,7 @@ const FormAdd = (props, {addExperience}) => {
     const enviarDatos = (event) => {
         event.preventDefault()
         props.addExperience(experienceData)
-        navigate("/")
+            .then(() => navigate("/"))
     }
 
 
@@ -42,7 +39,8 @@ const FormAdd = (props, {addExperience}) => {
 
         <section className="form-section">
             <div className="form-wrapper">
-                <h1>Añadir Nueva experiencia</h1>
+                <h1>{data ? 'Editar experiencia' : 'Nueva experiencia'}</h1>
+
                 <div className="form-container">
                     <form className="edit-form" onSubmit={enviarDatos} action="">
 
@@ -99,7 +97,7 @@ const FormAdd = (props, {addExperience}) => {
 
 
                         <div className="btn-edit-container">
-                            <button type="submit" className="btn-edit">GUARDAR</button>
+                            <button type="submit" className="btn-edit">Guardar</button>
                         </div>
                     </form>
                 </div>

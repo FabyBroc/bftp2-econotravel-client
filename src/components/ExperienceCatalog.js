@@ -7,7 +7,7 @@ import ExperienceDetail from "./ExperienceDetail";
 
 
 
- function ExperienceCatalog ({experiences, deleteExperience}) {
+ function ExperienceCatalog ({experiences, deleteExperience, editExperience}) {
 
 
          return (
@@ -15,6 +15,7 @@ import ExperienceDetail from "./ExperienceDetail";
              <div className="container">
                  {experiences.map(experience => <Card experience={experience} key={experience.id}
                                                       element={<ExperienceDetail/>} deleteExperience={deleteExperience}
+                                                      editExperience={editExperience}
                      />
 
 
