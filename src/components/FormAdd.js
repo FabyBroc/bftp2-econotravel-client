@@ -12,6 +12,7 @@ const FormAdd = (props) => {
 
 
     const {register, errors, handleSubmit} = useState("");
+    const [newExperience, setNewExperience] = useState("");
     const [requiresUpdate, setRequiresUpdate] = useState(true);
 
     const [datos, setDatos] = useState(data || {
