@@ -1,14 +1,8 @@
 import React from 'react'
 import './Card.css'
 import "./ExperienceDetail";
-import {NavLink as Link, Route, Routes} from "react-router-dom"
-import ExperienceCatalog from "./ExperienceCatalog";
-import About from "./About";
-import FormAdd from "./FormAdd";
-import ExperienceDetail from "./ExperienceDetail";
 
-
-function Card({experience, ExperienceDetail}) {
+function Card({experience, ExperienceDetail, deleteExperience}) {
 
     return (
 

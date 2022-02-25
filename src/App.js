@@ -53,7 +53,7 @@ function App() {
     }
 
     const deleteExperience = (id) => {
-        fetch(`http://localhost:8080/api/experiences/delete/{id}`,
+        fetch(`http://localhost:8080/api/experiences/delete/${id}`,
             {
                 method: 'DELETE'
             }
@@ -74,7 +74,7 @@ function App() {
 
 
             <Routes>
-                <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
+                <Route path="/" element={<ExperienceCatalog  experiences={experiences} deleteExperience={deleteExperience}/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/add" element={<FormAdd addExperience={addExperience}  />} />
 
