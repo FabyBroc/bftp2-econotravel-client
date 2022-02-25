@@ -34,7 +34,7 @@ function App() {
             {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({name: experience})
+                body: JSON.stringify(experience)
             }
         ).then(_ => setRequiresUpdate(true))
 
@@ -76,7 +76,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<ExperienceCatalog  experiences={experiences} />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/add" element={<FormAdd onSubmit={e => addExperience(e)}  />} />
+                <Route path="/add" element={<FormAdd addExperience={addExperience}  />} />
 
 
                 {/*<Route path="/infoExperience" element={<InfoExperience />} />*/}

@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import './FormAdd.css'
 
 
-const FormAdd = (props) => {
+const FormAdd = (props, {addExperience}) => {
 
     let navigate = useNavigate();
 
@@ -31,7 +31,7 @@ const FormAdd = (props) => {
     }
     const enviarDatos = (event) => {
         event.preventDefault()
-        props.onSubmit(experienceData)
+        props.addExperience(experienceData)
         navigate("/")
     }
 
@@ -82,13 +82,13 @@ const FormAdd = (props) => {
                             <input type="text"
                                    className="form-control"
                                    onChange={handleInputChange}
-                                   name="duration"
+                                   name="time"
                                    value={experienceData.time}/>
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="">Categorias</label>
-                            <textarea value={experienceData.category} name="description" id="" cols="50" rows="5"
+                            <textarea value={experienceData.category} name="category" id="" cols="50" rows="5"
                                       className="form-control"
                                       onChange={handleInputChange}/>
                         </div>
@@ -99,7 +99,7 @@ const FormAdd = (props) => {
                                    className="form-control"
                                    onChange={handleInputChange}
                                    value={experienceData.imgUrl}
-                                   name="Imagen"/>
+                                   name="imgUrl"/>
                         </div>
 
 
