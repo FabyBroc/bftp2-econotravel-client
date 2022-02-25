@@ -13,7 +13,6 @@ function NavBar() {
             </ul>
             <div className="end-nav">
                 <Link className="btn-add" to="/add">Add new</Link>
-                <input className="search" placeholder="Search" />
             </div>
         </div>
     )

@@ -15,7 +15,6 @@
     background-size: 0% 100%;
     background-position: right;
 
-    transition: background-size 500ms;
 }
 .card:hover {
     background-size: 100% 100%;
@@ -54,7 +53,7 @@
     background-size: 0% 100%;
     background-position: right;
 
-    transition: background-size 500ms;
+
 
 }
 

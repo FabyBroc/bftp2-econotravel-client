@@ -15,7 +15,7 @@ function Card({experience, editExperience, deleteExperience}) {
             <span className="card-title"><b>Duración:</b> {experience.time} h.</span>
             <span className="card-title"><b>Precio:</b> {experience.price} €</span>
             <div className="botones">
-                <button className="btn-orange editar">
+                <button className="btn">
                     <Link className="btn" to="/add"
                           state={{data: experience}}>Editar</Link>
                 </button>

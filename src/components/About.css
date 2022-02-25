@@ -2,3 +2,13 @@
 
     list-style: none;
 }
+
+.mision {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+
+

@@ -30,7 +30,7 @@ const FormAdd = (props) => {
     const enviarDatos = (event) => {
         event.preventDefault()
         props.addExperience(experienceData)
-            .then(() => navigate("/"))
+        navigate("/")
     }
 
 
