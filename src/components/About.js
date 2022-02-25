@@ -29,18 +29,12 @@ Preocupada por la falta de alternativas eco-friendly, Marina se propuso fundar u
             </div>
 
             <div className="contacto">
-                <span>
-
                 <h2>Contacto</h2>
-          <ul  className="contacto">
-          <li>Teléfono: 93 123 45 67</li>
-          <li>Correo: info@econotravel.com</li>
-              <li>Dirección: Carrer dels Viatgers, 28, 08001 Barcelona</li>
-
-          </ul>
-
-            </span>
-
+                  <ul className="contacto">
+                      <li>Teléfono: 93 123 45 67</li>
+                      <li>Correo: info@econotravel.com</li>
+                          <li>Dirección: Carrer dels Viatgers, 28, 08001 Barcelona</li>
+                  </ul>
             </div>
 
 

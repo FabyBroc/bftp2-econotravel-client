@@ -1,6 +1,7 @@
 .contacto{
-
+    justify-content: center;
     list-style: none;
+    padding: 20px;
 }
 
 .mision {
