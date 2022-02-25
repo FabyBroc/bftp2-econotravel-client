@@ -20,7 +20,6 @@ const FormAdd = (props, {addExperience}) => {
         time:'',
         price:'',
         imgUrl:'',
-        descripcionCorta:''
     })
 
 
@@ -56,12 +55,6 @@ const FormAdd = (props, {addExperience}) => {
                                    value={experienceData.name}/>
                         </div>
 
-                        <div className="form-group">
-                            <label htmlFor="">Descripción Corta</label>
-                            <textarea value={experienceData.descripcionCorta} name="descripcionCorta" id="" cols="50" rows="5"
-                                      className="form-control"
-                                      onChange={handleInputChange}/>
-                        </div>
 
                         <div className="form-group">
                             <label htmlFor="">Descripción</label>

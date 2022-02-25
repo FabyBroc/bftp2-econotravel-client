@@ -15,7 +15,7 @@ function Card({experience, ExperienceDetail, deleteExperience}) {
             <span className="card-title"><b>Precio:</b> {experience.price} €</span>
             <div className="botones">
                 <button className="btn">Edit</button>
-                <button className="btn">Delete</button>
+                <button className="btn" onClick={() => deleteExperience(experience.id)}>Delete</button>
             </div>
 
 
